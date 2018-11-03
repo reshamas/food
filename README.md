@@ -1,5 +1,4 @@
-# food
-Food Dataset
+# Food Dataset Classifer
 
 
 ## Food-101 Dataset
