@@ -17,6 +17,7 @@ tar xvzf file.tar.gz
 
 ## References
 - Naming Conventions:  https://github.com/drivendata/cookiecutter-data-science
+- Yelp food dataset:  https://www.yelp.com/dataset
 
 ## Creating Subset of Data
 ```bash
