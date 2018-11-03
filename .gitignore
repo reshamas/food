@@ -8,7 +8,8 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-data/
+data/*
+!data/.gitkeep
 !data/models
 build/
 develop-eggs/
