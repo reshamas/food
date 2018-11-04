@@ -31,3 +31,7 @@ ls food-101/images | head | xargs -I {}  cp -r food-101/images/{} subset/train
 
 ## Wish List (to do later)
 - create a class called "OTHER" which has miscellaneous images, so the algorithm returns "other" when it's a food that is not in one of the 101 categories.
+
+## Heroku Info
+- NP repo:  https://github.com/npatta01/bear-classifier/blob/master/readme.md
+
