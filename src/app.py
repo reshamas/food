@@ -39,12 +39,13 @@ def load_image_bytes(raw_bytes:ByteString)->Image:
 
 def predict(img)->List[Dict]:
     pred_class,pred_idx,losses = model.predict(img)
-    payload = []
+    predictions = []
     for image_class, loss in zip (model.data.classes, losses.tolist()):
-        payload.append(
+        predictions.append(
             {"class":image_class, "loss":loss}
         )
     
+    return {"class":pred_class, "predictions":predictions}
     return payload
 
 @app.route('/classify', methods=['POST','GET'])
@@ -55,18 +56,15 @@ def upload_file():
     else:
         bytes = flask.request.files['file'].read()
         img = load_image_bytes(bytes)
-    predictions = predict(img)
-    return flask.jsonify(predictions=predictions)    
+    res = predict(img)
+    return flask.jsonify(res)    
 
 @app.route('/')
 def index():
     return flask.render_template('index.html')
 
-@app.route('/pretty')
-def pretty():
-    return flask.render_template('pretty.html')
 
-with open('../models/classes.txt', 'r') as filehandle:  
+with open('models/classes.txt', 'r') as filehandle:  
     CLASSES = json.load(filehandle)
 model = load_model(CLASSES)
 
