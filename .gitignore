@@ -11,7 +11,7 @@ __pycache__/
 data/*
 !data/.gitkeep
 !models/classes.txt
-!data/models
+!models/final.pth
 build/
 develop-eggs/
 dist/
