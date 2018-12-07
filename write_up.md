@@ -25,6 +25,9 @@ tar xvzf file.tar.gz
 ## Cloud 
 
 
+## Training the Model
+https://github.com/npatta01/food-classifier
+
 ## Heroku App
 - https://food-img-classifier.herokuapp.com
 
