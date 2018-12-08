@@ -26,6 +26,9 @@ tar xvzf file.tar.gz
 jupyter@my-fastai-instance:~/projects/food/data$ pwd
 /home/jupyter/projects/food/data
 ```
+
+can use first 5 classes
+
 ```bash
 mkdir -p subset/train
 ls food-101/images | head | xargs -I {}  cp -r food-101/images/{} subset/train
